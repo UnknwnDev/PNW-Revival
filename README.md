@@ -24,5 +24,3 @@
     - [ ] Upcoming Events
 ---
 
-# PNW-Revival
-# PNW-Revival
