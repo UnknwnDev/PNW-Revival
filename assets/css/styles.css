@@ -1,0 +1,292 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#hero-content {
+    padding: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* Hero Section */
+#hero-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/assets/images/pnw-background.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.cta-button {
+    background-color: #3c6e71;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2a4d50;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo a {
+    text-transform: none;
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    filter: invert();
+}
+
+header .logo span {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+    line-height: 1;
+    display: inline-block;
+    max-width: 380px;
+    outline: none;
+    overflow: hidden;
+    padding: 16px 12px;
+}
+
+/* Navigation Styles */
+nav {
+    margin-left: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.nav-link a:hover {
+    color: #3498db;
+}
+
+/* Hamburger Menu Styles (Hidden on Desktop, Visible on Mobile) */
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    text-align: center;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+
+    position: fixed;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+
+    /* Header */
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo span {
+        font-size: 1.2rem !important;
+    }
+
+    /* Navigation */
+    .nav-links {
+        gap: 15px;
+    }
+
+    /* Live Stream */
+    #live-stream {
+        padding: 20px;
+    }
+
+    .live-stream-iframe {
+        height: 400px;
+    }
+
+    .live-stream-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    /* Hero Content */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Live Stream Section */
+    #live-stream {
+        padding: 20px;
+    }
+
+    .live-stream-iframe {
+        height: 350px;
+    }
+
+    .live-stream-link {
+        font-size: 0.85rem;
+        padding: 10px 18px;
+    }
+
+    /* Hide regular nav links on mobile */
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        flex-direction: column;
+        /* padding-right: 50px; */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Show hamburger icon on mobile */
+    #hamburger-menu {
+        display: flex;
+        margin: 0;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Header */
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        margin-bottom: 8px;
+    }
+
+    .logo span {
+        font-size: 1.1rem !important;
+    }
+
+    /* Live Stream Section */
+    #live-stream {
+        padding: 15px;
+    }
+
+    .live-stream-iframe {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .live-stream-link {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
