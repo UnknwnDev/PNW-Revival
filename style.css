@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* #region Base Variables (root-level, global) */
+
+:root {
+  /* #region Light Mode Colors */
+  --color-primary-light: 115, 61, 198;
+  --color-secondary-light: 156, 46, 89;
+  --color-accent-light: 209, 98, 140;
+  --color-bg-light: #f9f6fc;
+  --color-border-light: #ffffff4e;
+  --color-text-light: #14091f;
+
+  /* #endregion */
+
+  /* #region Dark Mode Colors */
+  --color-primary-dark: 111, 56, 194;
+  --color-secondary-dark: 119, 34, 84;
+  --color-accent-dark: 158, 46, 89;
+  --color-bg-dark: #040307;
+  --color-border-dark: #0000004e;
+  --color-text-dark: #ebdff6;
+
+  /* #endregion */
+
+  /* Neutral Scale */
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Feedback Colors */
+  --color-success: #16a34a;
+  --color-warning: #facc15;
+  --color-error: #dc2626;
+
+  /* #region Semantic Colors (use these in components) */
+  --color-primary: var(--color-primary-light);
+  --color-secondary: var(--color-secondary-light);
+  --color-accent: var(--color-accent-light);
+  --color-text: var(--color-text-light);
+  --color-bg: var(--color-bg-light);
+  --color-border: var(--color-border-dark);
+  --color-svg: invert(0%) sepia(100%) saturate(100%) hue-rotate(00deg)
+    brightness(100%) contrast(100%);
+
+  /* #endregion */
+}
+
+/* #region Dark Mode Overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: var(--color-primary-dark);
+    --color-secondary: var(--color-secondary-dark);
+    --color-accent: var(--color-accent-dark);
+    --color-text: var(--color-text-dark);
+    --color-bg: var(--color-bg-dark);
+    --color-border: var(--color-border-light);
+    --color-svg: invert(100%) sepia(100%) saturate(100%) hue-rotate(00deg)
+      brightness(100%) contrast(100%);
+  }
+}
+
+/* #endregion */
+
+/* #endregion  */
+
+/* #region General */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
+  height: 600px;
+  background-color: var(--color-primary);  /* Debuging */
+  /* border: #000 3px solid; */
+  margin: 25px 100px 100px;
+  padding: 0;
+}
+
+.section-title {
+  font-size: x-large;
+}
+
+.section-subtitle {
+  font-size: medium;
+  opacity: 0.6;
+}
+
+/* #endregion */
+
+/* #region Navagation */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav li a {
+  color: var(--color-text);
+}
+
+nav li a:hover {
+  opacity: 0.7;
+}
+
+nav img {
+  width: auto;
+  max-width: 10%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  filter: var(--color-svg);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-links {
+  display: none;
+}
+
+
+/* Hamburger button */
+.hamburger {
+  display: none; /* hidden on large screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+}
+
+/* #endregion */
+
+/* #region Hero Section */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* #region Hero Text */
+
+.hero-text {
+  width: 50%;
+  padding: 10px 50px;
+}
+
+.hero-text .scripture {
+  font-size: small;
+  font-style: italic;
+  padding-top: 5%;
+  opacity: 0.5;
+}
+
+/* #endregion */
+
+/* #region Hero Button */
+.cta-buttons {
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.cta-buttons a {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: small;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}
+
+.cta-buttons a:hover {
+  transform: translateY(-5px);
+}
+
+.cta-primary {
+  background-color: rgba(var(--color-secondary), 0.3);
+  color: var(--color-text);
+}
+
+.cta-secondary {
+  background-color: rgba(var(--color-primary));
+  color: var(--color-white);
+}
+
+.cta-secondary:hover {
+  box-shadow: 0px 5px 30px rgba(var(--color-primary), 0.7);
+}
+
+/* #endregion */
+
+/* #region Hero Image  */
+.hero-img {
+  /* position: relative; */
+  width: 50%;
+  height: 100%;
+}
+
+.hero-img img {
+  width: 100%;
+  /* margin-top: -150px; */
+}
+
+.hero-img .img-credit {
+  /* position: absolute;
+  top: 80%;
+  right: 5%; */
+  text-align: right;
+  margin: -15% 5% 0;
+  font-size: small;
+}
+
+.img-credit a {
+  color: rgb(var(--color-accent));
+}
+
+/* #endregion */
+
+/* #endregion */
+
+
+
+
+/* #region Responsive Design */
+
+/* Tablets and medium screens */
+@media (max-width: 1024px) {
+  section {
+    padding-top: 30px;
+    margin: 20px 50px 50px;
+    height: auto; /* Let sections grow with content */
+  }
+
+  .hero {
+    flex-direction: column; /* Stack hero text and image */
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .hero-img {
+    width: 80%;
+    margin: -40px auto 0;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  nav ul {
+      display: none; /* hide menu */
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--color-bg);
+      position: absolute;
+      top: 60px; /* adjust depending on nav height */
+      left: 0;
+      padding: 1rem 0;
+      z-index: 10;
+    }
+
+  nav ul li {
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul li ul.sub-links {
+    display: none; /* optional: hide sub-links */
+    padding-left: 1rem;
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger on mobile */
+  }
+
+  nav {
+    position: relative; /* required for absolute menu */
+  }
+
+  nav ul.show {
+    display: flex; /* show menu when active */
+  }
+  .hero-text h1 {
+    font-size: large;
+  }
+
+  .hero-text h2 {
+    font-size: small;
+  }
+
+  .cta-buttons a {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  section {
+    margin: 10px 15px 20px;
+  }
+
+  .hero-text {
+    padding: 5px 10px;
+  }
+
+  .hero-text h1 {
+    font-size: medium;
+  }
+
+  .hero-text h2 {
+    font-size: x-small;
+  }
+
+  nav img {
+    max-width: 30%;
+  }
+}
+
+/* #endregion */
