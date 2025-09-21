@@ -3,23 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to PNW Revival</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home - PNW Revival</title>
   </head>
+
   <body>
-    <!-- Include html -->
-    <div class="header" id="header"></div>
+    <nav>
+      <img src="assets/img/logo.svg" alt="logo" />
+
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">About</a>
+          <ul class="sub-links">
+            <li><a href="#">What we do</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Get Involved</a>
+          <ul class="sub-links">
+            <li><a href="#">Volunteer</a></li>
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- Hero Section -->
-    <div id="hero-content">
-      <h1>Serving with Truth and Compassion of Christ</h1>
-      <p>
-        Through prayer, provision, and presence, we bring the good news of Jesus
-        to those in need—city to city, heart to heart.
-      </p>
-    </div>
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="section-title">Reviving Hope in the Pacific Northwest</h1>
+        <h2 class="section-subtitle">
+          Serving the Pacific Northwest by sharing the love and truth of Jesus
+          Christ—meeting physical needs, building lasting relationships, and
+          proclaiming the Gospel.
+        </h2>
 
-    <div class="footer" id="footer"></div>
-    <script src="assets/js/main.js"></script>
+        <div class="cta-buttons">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe_CaXNdu6VbIpE39Fcn2TiIjekUKw-mv4hWR1xIsxio7f63g/viewform?usp=header"
+            class="cta-primary"
+            >Join the Mission</a
+          >
+          <a href="#learn" class="cta-secondary">Learn More</a>
+        </div>
+
+        <p class="scripture">
+          “Suppose a brother or a sister is without clothes and daily food… If
+          one of you says to them, ‘Go in peace; keep warm and well fed,’ but
+          does nothing about their physical needs, what good is it?” – James
+          2:15–16
+        </p>
+      </div>
+
+      <div class="hero-img">
+        <img src="assets/img/hero-bg.png" alt="cluster of pine trees" />
+        <p class="img-credit">
+          Designed by
+          <a
+            href="https://www.freepik.com/free-psd/majestic-evergreen-forest-panorama-serene-collection-tall-coniferous-trees_405497057.htm#fromView=keyword&page=1&position=25&uuid=ce4f7ebb-0ec8-45f9-b653-4f7e8def2818&query=Pine+tree?sign-up=google"
+            >Freepik</a
+          >
+        </p>
+      </div>
+    </section>
+    <!-- 
+    <section class="mission">
+      <h1 class="section-title">What We Do</h1>
+      <h2 class="section-subtitle">
+        We bring meals, clothing, and care to those experiencing homelessness
+        and poverty, while sharing the hope of Christ through conversation,
+        prayer, and community. Together with volunteers, we seek to fulfill the
+        Great Commission city by city.
+      </h2>
+
+    </section>
+
+    <section class="testimonials">
+      <h3 class="section-title">Testimonials</h3>
+    </section> -->
   </body>
 </html>
