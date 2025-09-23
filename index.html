@@ -8,10 +8,11 @@
   </head>
 
   <body>
+    <!-- Navigation -->
+    <div class="nav-trigger"></div>
     <nav>
       <img src="assets/img/logo.svg" alt="logo" />
 
-      <!-- Hamburger button -->
       <button class="hamburger" aria-label="Toggle Menu">
         <span></span>
         <span></span>
@@ -39,58 +40,100 @@
       </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1 class="section-title">Reviving Hope in the Pacific Northwest</h1>
-        <h2 class="section-subtitle">
-          Serving the Pacific Northwest by sharing the love and truth of Jesus
-          Christ—meeting physical needs, building lasting relationships, and
-          proclaiming the Gospel.
-        </h2>
-
-        <div class="cta-buttons">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSe_CaXNdu6VbIpE39Fcn2TiIjekUKw-mv4hWR1xIsxio7f63g/viewform?usp=header"
-            class="cta-primary"
-            >Join the Mission</a
-          >
-          <a href="#learn" class="cta-secondary">Learn More</a>
-        </div>
-
-        <p class="scripture">
-          “Suppose a brother or a sister is without clothes and daily food… If
-          one of you says to them, ‘Go in peace; keep warm and well fed,’ but
-          does nothing about their physical needs, what good is it?” – James
-          2:15–16
-        </p>
+    <main class="snap-container">
+      <div class="section-wrapper">
+        <section class="section section--video">
+          <video autoplay muted loop>
+            <source src="assets/video/outreach.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="overlay">
+            <h2>PNW Revival</h2>
+            <p>Serving God by serving people</p>
+          </div>
+        </section>
       </div>
 
-      <div class="hero-img">
-        <img src="assets/img/hero-bg.png" alt="cluster of pine trees" />
-        <p class="img-credit">
-          Designed by
-          <a
-            href="https://www.freepik.com/free-psd/majestic-evergreen-forest-panorama-serene-collection-tall-coniferous-trees_405497057.htm#fromView=keyword&page=1&position=25&uuid=ce4f7ebb-0ec8-45f9-b653-4f7e8def2818&query=Pine+tree?sign-up=google"
-            >Freepik</a
-          >
-        </p>
+      <!-- Fullscreen Hero Section with Image -->
+      <div class="section-wrapper bg-light section--full">
+        <section class="section section--split">
+          <!-- Hero Text -->
+          <div class="section-text">
+            <h1 class="section-title">
+              Reviving Hope in the Pacific Northwest
+            </h1>
+            <h2 class="section-subtitle">
+              Serving the Pacific Northwest by sharing the love and truth of
+              Jesus Christ—meeting physical needs, building lasting
+              relationships, and proclaiming the Gospel.
+            </h2>
+
+            <div class="cta-buttons">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe_CaXNdu6VbIpE39Fcn2TiIjekUKw-mv4hWR1xIsxio7f63g/viewform?usp=header"
+                class="cta-primary"
+              >
+                Join the Mission
+              </a>
+              <a href="#learn" class="cta-secondary">Learn More</a>
+            </div>
+
+            <p class="scripture">
+              “Suppose a brother or a sister is without clothes and daily food…
+              If one of you says to them, ‘Go in peace; keep warm and well fed,’
+              but does nothing about their physical needs, what good is it?” –
+              James 2:15–16
+            </p>
+          </div>
+
+          <!-- Hero Image -->
+          <div>
+            <img src="assets/img/hero-bg.png" alt="Cluster of pine trees" />
+            <p class="img-credit">
+              Designed by
+              <a
+                href="https://www.freepik.com/free-psd/majestic-evergreen-forest-panorama-serene-collection-tall-coniferous-trees_405497057.htm#fromView=keyword&page=1&position=25&uuid=ce4f7ebb-0ec8-45f9-b653-4f7e8def2818&query=Pine+tree?sign-up=google"
+              >
+                Freepik
+              </a>
+            </p>
+          </div>
+        </section>
       </div>
-    </section>
-    <!-- 
-    <section class="mission">
-      <h1 class="section-title">What We Do</h1>
-      <h2 class="section-subtitle">
-        We bring meals, clothing, and care to those experiencing homelessness
-        and poverty, while sharing the hope of Christ through conversation,
-        prayer, and community. Together with volunteers, we seek to fulfill the
-        Great Commission city by city.
-      </h2>
 
-    </section>
-
-    <section class="testimonials">
-      <h3 class="section-title">Testimonials</h3>
-    </section> -->
+      <!-- Stats Section (Bar Chart) -->
+      <div class="section-wrapper bg-soft">
+        <section class="section--split">
+          <div class="section-text">
+            <h1 class="section-title">What We Do</h1>
+            <h2 class="section-subtitle">
+              We bring meals, clothing, and care to those experiencing
+              homelessness and poverty, while sharing the hope of Christ through
+              conversation, prayer, and community. Together with volunteers, we
+              seek to fulfill the Great Commission city by city.
+            </h2>
+          </div>
+          <section class="section--grid">
+            <h2 class="section-title grid-title">Given Away</h2>
+            <div class="card">
+              <h3>📖 XX</h3>
+              <p>Bibles</p>
+            </div>
+            <div class="card">
+              <h3>🥪 XX</h3>
+              <p>Sandwiches</p>
+            </div>
+            <div class="card">
+              <h3>👕 XX</h3>
+              <p>Clothes</p>
+            </div>
+            <div class="card">
+              <h3>🛠️ XX</h3>
+              <p>Other</p>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
