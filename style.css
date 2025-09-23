@@ -185,12 +185,36 @@ section p {
    Navigation 
    =========================== */
 
+   /* invisible trigger area at top */
+.nav-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;     /* size of the "hover zone" */
+  z-index: 2000;
+}
+
+/* when trigger is hovered, reveal nav */
+.nav-trigger:hover + nav,
+nav:hover {
+  transform: translateY(0);
+}
+
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  transform: translateY(-100%); /* start hidden above */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1999;
 }
 
 nav li a {
