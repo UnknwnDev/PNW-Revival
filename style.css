@@ -212,7 +212,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  transform: translateY(-100%); /* start hidden above */
+ /* transform: translateY(-100%); /* start hidden above */
   transition: transform 0.3s ease-in-out;
   z-index: 1999;
 }
@@ -243,7 +243,28 @@ nav ul {
 
 .sub-links {
   display: none;
+  max-height: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  position: absolute;
 }
+
+.master-link {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.master-link:hover > .sub-links{
+  display: inline;
+  max-height: 100%;
+}
+
+.master-link:hover > a{
+  opacity: 0;
+}
+
 
 /* Hamburger button */
 .hamburger {
